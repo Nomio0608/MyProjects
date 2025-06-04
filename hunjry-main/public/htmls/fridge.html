@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хөргөгч | Hunjry App</title>
+    
+    <link rel="stylesheet" href="/css/fridge.css">
+    <script src="/Javascript/fridge.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="logo" href="/htmls/nuur.html" aria-label="Нүүр хуудас">
+            <img src="/iconpic/logo2.png" 
+                 alt="Hungry App Logo" 
+                 width="50" 
+                 height="45"
+                 loading="eager"
+                 fetchpriority="high">
+        </a>
+        <div class="navbar">
+        <nav>
+            <a href="/htmls/nuur.html">
+                <img src="/iconpic/log-out.png" alt="log-out pic">
+            </a>
+            <a href="/htmls/fridge.html">
+                <img src="/iconpic/fridge.png" alt="fridge pic">
+            </a>
+            <a href="/htmls/plan.html">
+                <img src="/iconpic/plan.png" alt="plan pic">
+            </a>
+            <a href="/htmls/food.html">
+                <img src="/iconpic/food.png" alt="food info pic">
+            </a>
+            <a href="/htmls/hereglegch.html">
+                <img src="/iconpic/profile.png" alt="user's profile pic">
+            </a>
+            
+        </nav>
+        </div>
+    </header>
+    <main class="fridge-container">
+        <h1>Таны хөргөгчинд юу юу байна вэ?</h1>
+
+        <div class="add-ingredient">
+            <input type="text" id="new-ingredient" placeholder="Шинэ орц нэмэх...">
+            <button id="add-ingredient-btn">+ Нэмэх</button>
+        </div>
+      
+        <div class="categories">
+            <div class="category">
+                <h3>Жимс,ногоо</h3>
+                <label>Сармис</label>
+                <label>Лууван</label>
+                <label>Төмс</label>
+                <label>Амтат чинжүү</label>
+                <label>Халуун чинжүү</label>
+                <label>Улаан лооль</label>
+                <label>Нимбэг</label>
+                <label>Алим</label>
+            </div>
+            <div class="category">
+                <h3>Мах,өндөг</h3>
+                <label>Тахианы мах</label>
+                <label>Үхрийн мах</label>
+                <label>Өндөг</label>
+            </div>
+            <div class="category">
+                <h3>Сүүн бүтээгдэхүүн</h3>
+                <label>Сүү</label>
+                <label>Цөцгийн тос</label>
+                <label>Бяслаг</label>
+            </div>
+            <div class="category">
+                <h3>Үр тариа</h3>
+                <label>Гурил</label>
+                <label>Бор будаа </label>
+                <label>Цагаан будаа </label>
+                <label>Гоймон</label>
+            </div>
+            <div class="category">
+                <h3>Бусад</h3>
+                <label>Давс </label>
+                <label>Элсэн чихэр </label>
+                <label>Перц </label>
+                <label>Кетчуп</label>
+                <label>Майонез</label>
+
+            </div>
+        </div>
+        <div class="my-fridge">
+            <h2>Миний хөргөгч:</h2>
+            <div id="fridge-ingredients"></div>
+            <button id="clear-fridge">Цэвэрлэх</button>
+        </div>
+       
+        <button id="find-recipes">Жор хайх</button>
+
+        <div class="recipes">
+            <h2>Боломжит жорууд:</h2>
+            <ul id="recipe-list"></ul>
+        </div>
+        </main>
+        <footer>
+            <section>
+                <h3>Жор төрөл</h3>
+                <ul>
+                    <li>Оройн хоол</li>
+                    <li>Өглөөний хоол</li>
+                    <li>Амттан</li>
+                    <li>Эрүүл хоол</li>
+                    <li>Хүүхдэд зориулсан</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Оройн хоол</h3>
+                <ul>
+                    <li>Тахиа</li>
+                    <li>Үхрийн мах</li>
+                    <li>Суп, шөл</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Орон орны хоол</h3>
+                <ul>
+                    <li>Азийн</li>
+                    <li>Италийн</li>
+                    <li>Грек</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Улирал</h3>
+                <ul>
+                    <li>Хавар</li>
+                    <li>Зун</li>
+                    <li>Намар</li>
+                    <li>Өвөл</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>X (Twitter)</li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+    </html>
+    
+</body>
+</html>

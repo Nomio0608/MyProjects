@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hungry App - Нэвтрэх</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <main class="container">
+    <section class="left-section">
+      <img src="/iconpic/login img2.jpg" alt="Login Illustration" height="100%">
+    </section>
+    
+    <section class="right-section">
+      <h2>Нэвтрэх</h2>
+      <br>
+      
+      <form class="form-field" action="/login" method="POST">
+        <input type="text" 
+             name="username" 
+             id="username" 
+             placeholder="Нэвтрэх нэр"
+             required
+             autocomplete="username">
+        
+        <div class="password-field">
+          <input type="password" 
+               name="password" 
+               id="password" 
+               placeholder="Нууц үг"
+               required
+               autocomplete="current-password">
+          <button type="button" id="toggle-password">🐵</button>
+        </div>
+        
+        <div class="login-button">
+          <button type="submit">Нэвтрэх</button>
+        </div>
+      </form>
+      <br>
+      <section class="other-login">
+        <div class="fb-google-login">
+          <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" alt="Facebook Login"></a>
+          <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Login"></a>
+        </div>
+      </section>
+      <br>
+      <p>Хэрвээ та нэвтрэх эрхгүй бол бүртгүүлнэ үү. <a href="/register">Бүртгүүлэх</a></p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('toggle-password').addEventListener('click', function() {
+      const passwordInput = document.getElementById('password');
+      const toggleButton = this;
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleButton.textContent = '🙈';
+        toggleButton.setAttribute('aria-label', 'Нууц үгийг нуух');
+      } else {
+        passwordInput.type = 'password';
+        toggleButton.textContent = '🐵';
+        toggleButton.setAttribute('aria-label', 'Нууц үгийг харуулах');
+      }
+    });
+  </script>
+  <script src="/Javascript/login.js" defer></script>
+</body>
+</html>

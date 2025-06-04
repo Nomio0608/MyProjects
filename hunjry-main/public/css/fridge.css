@@ -1,0 +1,241 @@
+:root {
+    --primary-color: #f90;
+    --secondary-color: #333;
+    --background-color: #FBF8F1;
+    --text-color: #333333;
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background: var(--secondary-color);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+}
+
+header nav img {
+    height: 40px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    filter: invert(57%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+header nav img:hover {
+    opacity: 1;
+}
+
+.fridge-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.category h3 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.category {
+    width: 30%;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+label.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.add-ingredient {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new-ingredient {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+}
+
+#add-ingredient-btn {
+    padding: 8px;
+    background: #66896e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#add-ingredient-btn:hover {
+    background: #218838;
+}
+
+.my-fridge {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f5f5f5 !important;
+    border-radius: 8px;
+}
+
+#fridge-ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.fridge-item {
+    background: rgb(210, 65, 233);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fridge-item:hover {
+    background: rgb(209, 97, 97);
+}
+
+#clear-fridge {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #7c7a7a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#clear-fridge:hover {   
+    background: #555;
+}
+
+#find-recipes {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recipes {
+    margin-top: 50px;
+}
+
+#recipe-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#recipe-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+footer {
+    background: var(--secondary-color);
+    color: white;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    position: sticky;
+}
+
+footer section h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+footer ul li:hover {
+    opacity: 1;
+    cursor: pointer;
+}

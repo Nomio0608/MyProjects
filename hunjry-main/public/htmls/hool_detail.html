@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hungry App - Хоолны жорын дэлгэрэнгүй мэдээлэл. Орц найрлага, хийх дараалал, үнэлгээ болон сэтгэгдлүүд.">
+    <meta name="keywords" content="жор, хоол, монгол хоол, хоол хийх, орц найрлага, хийх дараалал">
+    <meta name="author" content="Hungry App Team">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preload" href="/css/hool_detail.css" as="style">
+    <link rel="preload" href="/iconpic/logo.gif" as="image" type="image/gif">
+    <link rel="canonical" href="http://localhost:3000/htmls/hool_detail.html" />
+    <link rel="alternate" href="http://localhost:3000/htmls/hool_detail.html" hreflang="mn" />
+
+    <meta name="theme-color" content="#4CAF50">
+    <title>Hungry App - Хоолны жорын дэлгэрэнгүй | Орц, найрлага, хийх дараалал</title>
+    <link rel="stylesheet" href="/css/hool_detail.css">
+    <script type="module" src="/Javascript/components/app.js" defer></script>
+    <script src="/Javascript/food-detail.js" defer></script>
+    <style>
+        :root {
+            --primary-bg: #f8f8f8;
+            --primary-border: #6C837B;
+            --hover-bg: #6C837B;
+            --active-bg: #ff4d6d;
+            --icon-filter: invert(0);
+
+            --dark-bg: #333;
+            --dark-border: #999;
+            --dark-hover-bg: #555;
+            --dark-active-bg: #ff4d6d;
+            --dark-icon-filter: invert(1);
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body[data-theme="dark"] {
+            background-color: #222;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link visually-hidden">Үндсэн агуулга руу очих</a>
+
+    <header role="banner">
+        <a class="logo" href="/htmls/nuur.html" aria-label="Нүүр хуудас руу буцах">
+            <img src="/iconpic/logo2.png" alt="Hungry App Logo" width="45" height="45" loading="eager"
+                fetchpriority="high">
+        </a>
+
+        <section class="search-bar">
+            <label for="search-bar" class="visually-hidden">Хоолны нэрээр хайх</label>
+            <input type="search" name="search" id="search-bar" placeholder="Хоолны нэр" aria-label="Хоолны нэрээр хайх">
+            <section class="dropdown-container" aria-live="polite"></section>
+        </section>
+
+        <nav class="icons" aria-label="Үндсэн цэс" role="navigation">
+            <a href="nuur.html" aria-label="Системээс гарах">
+                <img src="/iconpic/log-out.png" alt="" width="30" height="30" loading="lazy" aria-hidden="true">
+                <span class="visually-hidden">Гарах</span>
+            </a>
+            <a href="fridge.html" aria-label="Хөргөгч рүү очих">
+                <img src="/iconpic/fridge.png" alt="" width="30" height="30" loading="lazy" aria-hidden="true">
+                <span class="visually-hidden">Хөргөгч</span>
+            </a>
+            <a href="plan.html" aria-label="Төлөвлөгөө рүү очих">
+                <img src="/iconpic/plan.png" alt="" width="30" height="30" loading="lazy" aria-hidden="true">
+                <span class="visually-hidden">Төлөвлөгөө</span>
+            </a>
+            <a href="food.html" aria-label="Хоолны жагсаалт руу очих">
+                <img src="/iconpic/food.png" alt="" width="30" height="30" loading="lazy" aria-hidden="true">
+                <span class="visually-hidden">Хоол</span>
+            </a>
+            <a href="hereglegch.html" aria-label="Хэрэглэгчийн профайл руу очих">
+                <img src="/iconpic/profile.png" alt="" width="30" height="30" loading="lazy" aria-hidden="true">
+                <span class="visually-hidden">Профайл</span>
+            </a>
+            <button class="toggle-theme">🌗</button>
+
+        </nav>
+    </header>
+
+    <main id="main-content" role="main" tabindex="-1">
+        <article class="recipe-details">
+            <h1 class="visually-hidden">Хоолны жорын дэлгэрэнгүй мэдээлэл</h1>
+
+            <section class="recipe-image" aria-label="Хоолны зураг">
+                <img src="/foodpic/238691-Simple-Macaroni-And-Cheese-mfs_006-f7f521c65f894aef85e17bc9125c2c4a.jpg"
+                    alt="Бяслагтай макарон" width="800" height="600" loading="eager">
+
+                <template id="rating-template">
+                    <div class="rating-container" role="group" aria-label="Үнэлгээ">
+                        <span class="stars"></span>
+                        <span class="visually-hidden"></span>
+                    </div>
+                </template>
+
+                <div class="icon" role="group" aria-label="Үнэлгээ болон сэтгэгдэл">
+                    <div class="icons-container">
+                        <div class="like-button-container"></div>
+                        <button type="button" aria-label="Сэтгэгдэл бичих" aria-expanded="false">
+                            <img src="/iconpic/comment.png" alt="" aria-hidden="true">
+                        </button>
+                    </div>
+                    <div id="rating-section"></div>
+                </div>
+
+                <section class="suggested-foods" aria-label="Санал болгож буй бусад хоол">
+                </section>
+            </section>
+
+            <section class="recipe-content" aria-label="Жорын мэдээлэл">
+            </section>
+
+            <section class="comments" aria-label="Сэтгэгдлүүд">
+                <h2>Сэтгэгдэл</h2>
+                <form class="comment-input" aria-label="Сэтгэгдэл бичих">
+                    <label for="commentInput" class="visually-hidden">Сэтгэгдэл</label>
+                    <input type="text" id="commentInput" placeholder="Сэтгэгдэл үлдээх" aria-label="Сэтгэгдэл бичих">
+                    <button type="submit">Нийтлэх</button>
+                </form>
+                <div class="comments-container" aria-live="polite">
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+        <section class="recipe_categories">
+            <h3>Жор төрөл</h3>
+            <ul>
+                <li>Оройн хоол</li>
+                <li>Өглөөний хоол</li>
+                <li>Амттан</li>
+                <li>Эрүүл хоол</li>
+                <li>Хүүхдэд зориулсан</li>
+            </ul>
+        </section>
+        <section class="meal-types">
+            <h3>Оройн хоол</h3>
+            <ul>
+                <li>Тахиа</li>
+                <li>Үхрийн мах</li>
+                <li>Суп, шөл</li>
+            </ul>
+        </section>
+        <section class="international-cuisine">
+            <h3>Орон орны хоол</h3>
+            <ul>
+                <li>Азийн</li>
+                <li>Италийн</li>
+                <li>Грек</li>
+            </ul>
+        </section>
+        <section class="seasons">
+            <h3>Улирал</h3>
+            <ul>
+                <li>Хавар</li>
+                <li>Зун</li>
+                <li>Намар</li>
+                <li>Өвөл</li>
+            </ul>
+        </section>
+        <section class="social-links">
+            <h3>Холбоо барих</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>X (Twitter)</li>
+            </ul>
+        </section>
+    </footer>
+    <script>
+        const toggleButton = document.querySelector('.toggle-theme');
+        toggleButton.addEventListener('click', () => {
+            const root = document.documentElement;
+            const isDarkMode = root.getAttribute('data-theme') === 'dark';
+            root.setAttribute('data-theme', isDarkMode ? 'light' : 'dark');
+        });
+    </script>
+
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #4CAF50;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</body>
+
+</html>

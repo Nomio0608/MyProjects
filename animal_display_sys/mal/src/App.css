@@ -1,0 +1,45 @@
+/* App.css */
+
+/* Гол контейнер */
+div {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  border-color: aqua;
+}
+
+/* Гарчиг */
+h1 {
+  color: #333;
+}
+
+/* Малын мэдээлэлтэй карт */
+.animal-card {
+  border-radius: 10px;
+  border-color: aqua;
+  padding: 15px;
+  margin: 10px auto;
+  width: 250px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Малын нэр */
+h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+/* Малын дуу, өнгө */
+p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: blue;
+}
+
+/* Янз бүрийн малын картны текст өнгө */
+.animal-card:nth-child(odd) {
+  color: black;
+}

@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #6C837B;
+    --hover-color: #6C837B;
+    --active-color: #ff4d6d;
+    --button-size: 45px;
+    --icon-size: 25px;
+    --border-radius: 50%;
+    --spacing: 15px;
+    --text-spacing: 1.5px;
+    --line-height: 1.6;
+    --transition-speed: 0.3s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: var(--text-spacing);
+    line-height: var(--line-height);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing) 0;
+}
+
+.icons-container {
+    display: flex;
+    gap: var(--spacing);
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.heart-button, .comment-button {
+    background: none;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: 8px;
+    transition: all var(--transition-speed) ease;
+    width: var(--button-size);
+    height: var(--button-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.heart-button:hover, .comment-button:hover {
+    transform: scale(1.1);
+    background-color: var(--hover-color);
+}
+
+.heart-button:hover img, .comment-button:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.heart-button img, .comment-button img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    transition: filter var(--transition-speed) ease;
+}
+
+.heart-button.active {
+    background-color: var(--active-color);
+    border-color: var(--active-color);
+}
+
+.heart-button.active img {
+    filter: brightness(0) invert(1);
+}
+
+.heart-button:active, .comment-button:active {
+    transform: scale(0.95);
+}
+
+.heart-button:focus, .comment-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 131, 123, 0.3);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --button-size: 40px;
+        --icon-size: 20px;
+        --spacing: 10px;
+    }
+
+    .icons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --button-size: 35px;
+        --icon-size: 18px;
+        --spacing: 8px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
