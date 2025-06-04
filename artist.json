@@ -1,0 +1,78 @@
+{
+    "record":{
+    "products": [
+    {
+        "id":"1",
+        "artist": "Номин",
+        "img": "/assets/budalt (4).png",
+        "year": "10",
+        "reward":"MISS WORLD 2023",
+        "count":"5",
+        "comment1":" ene narnii tosiig turheed deeres n budahad ymr ch arzaij barzaisan ym bhgui uneheer glowy goy bolgoj bsn",
+        "comment2":" ene narnii tosiig turheed deeres n budahad ymr ch arzaij barzaisan ym bhgui uneheer glowy goy bolgoj bsn",
+        "makeup":[
+            {
+                "img":"/assets/budalt (11).png",
+                "count":"3"
+            },
+            {
+                "img":"/assets/budalt (10).png",
+                "count":"4"
+            },
+            {
+                "img":"/assets/budalt (9).png",
+                "count":"5"
+            }
+        ]
+    },
+    {
+        "id":"2",
+        "artist": "Хангал",
+        "img": "/assets/budalt (11).png",
+        "year": "5",
+        "reward":"MISS ASIA 2020",
+        "count":"3",
+        "comment1":" ene narnii tosiig turheed deeres n budahad ymr ch arzaij barzaisan ym bhgui uneheer glowy goy bolgoj bsn",
+        "comment2":" ene narnii tosiig turheed deeres n budahad ymr ch arzaij barzaisan ym bhgui uneheer glowy goy bolgoj bsn",
+        "makeup":[
+            {
+                "img":"/assets/budalt (11).png",
+                "count":"3"
+            },
+            {
+                "img":"/assets/budalt (10).png",
+                "count":"4"
+            },
+            {
+                "img":"/assets/budalt (9).png",
+                "count":"5"
+            }
+        ]
+    },
+    {
+        "id":"3",
+        "artist": "Заяа",
+        "img": "/assets/budalt (5).png",
+        "year": "4",
+        "reward":"MISS EUROPE 2019",
+        "count":"4",
+        "comment1":" ene narnii tosiig turheed deeres n budahad ymr ch arzaij barzaisan ym bhgui uneheer glowy goy bolgoj bsn",
+        "comment2":" ene narnii tosiig turheed deeres n budahad ymr ch arzaij barzaisan ym bhgui uneheer glowy goy bolgoj bsn",
+        "makeup":[
+            {
+                "img":"/assets/budalt (10).png",
+                "count":"3"
+            },
+            {
+                "img":"/assets/budalt (11).png",
+                "count":"4"
+            },
+            {
+                "img":"/assets/budalt (9).png",
+                "count":"5"
+            }
+        ]
+    }
+]
+    }
+}
